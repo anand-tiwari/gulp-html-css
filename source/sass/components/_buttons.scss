@@ -1,0 +1,98 @@
+@import '_color.scss';
+
+/* BUTTON DEFAULT PROPERTY 
+============================================= */
+
+%btn {
+    color: $agent-color-2;
+    curser: pointer;
+    border: none;
+    shadow: none;
+    border-radius: 0px;
+    font-size: font-size(0px);
+    text-shadow: none;
+    font-family: $font-primary;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+
+/* BUTTON MIXIN 
+============================================= */
+
+@mixin btn-background-darken($btn-background) {
+    @extend %btn;
+    background-color: $btn-background;
+    &:hover {
+        background-color: darken($btn-background, 5%);
+    }
+    &:focus {
+        background-color: darken($btn-background, 5%);
+    }
+    &:active {
+        background-color: darken($btn-background, 5%);
+    }
+}
+
+
+
+@mixin btn-background-lighten($btn-background) {
+    @extend %btn;
+    background-color: $btn-background;
+    &:hover {
+        background-color: lighten($btn-background, 5%);
+    }
+    &:focus {
+        background-color: lighten($btn-background, 5%);
+    }
+    &:active {
+        background-color: lighten($btn-background, 5%);
+    }
+}
+
+%btn-one {
+    @include btn-background-darken($agent-color-2);
+    color: $agent-color-1;
+}
+
+%btn-two {
+    @include btn-background-darken($agent-color-1);
+    color: $agent-color-2;
+}
+
+%btn-three {
+    @include btn-background-lighten($agent-color-3);
+    color: $agent-color-2;
+}
+
+
+/* Custom default button */
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-one,
+.btn-one:hover,
+.btn-one:active,
+.btn-one:focus
+{
+   @extend %btn-one;
+}
+
+.btn-two,
+.btn-two:hover,
+.btn-two:focus,
+.btn-two:active {
+    @extend %btn-two;
+}
+
+
+.btn-three,
+.btn-three:hover,
+.btn-three:focus,
+.btn-three:active {
+    @extend %btn-three;
+    cursor: pointer;
+    text-decoration: none;
+}
