@@ -141,6 +141,28 @@ body {
   outline: 1px solid #ddd; /* focus style */
 }
 
+#radio-1.radio-custom + .radio-custom-label:before {
+    border: 3px solid #36A3BE;
+}
+#radio-1.radio-custom:checked + .radio-custom-label:before {
+    background: #36A3BE;
+}
+
+#radio-3.radio-custom + .radio-custom-label:before {
+    border: 3px solid #EE6B35;
+}
+#radio-3.radio-custom:checked + .radio-custom-label:before {
+    background: #EE6B35;
+}
+
+#radio-4.radio-custom + .radio-custom-label:before {
+    border: 3px solid #DA9233;
+}
+#radio-4.radio-custom:checked + .radio-custom-label:before {
+    background: #DA9233;
+}
+
+
 .mail-option{
     ul{
         li{
@@ -156,8 +178,8 @@ body {
             background: white;
             color: black;
             .unread{
-                background: #D43B3A;
-                border: 2px solid #D43B3A;
+                background: #D04E39;
+                border: 2px solid #D04E39;
                 color: white;
             }
         }
