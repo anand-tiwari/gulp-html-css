@@ -114,12 +114,8 @@ body {
 
 .radio-custom + .radio-custom-label:before {
     content: '';
-    background: #fff;
-    border: 2px solid #ddd;
-
     background: #2C3539;
     border: 3px solid #298F67;
-
     display: inline-block;
     vertical-align: middle;
     width: 32px;
@@ -127,21 +123,21 @@ body {
     padding: 2px;
     margin-right: 10px;
     text-align: center;
-}
-
-.radio-custom + .radio-custom-label:before {
     border-radius: 50%;
+    transition: background 1000ms ease-out;
 }
 
 .radio-custom:checked + .radio-custom-label:before {
     background: #298F67;
     box-shadow: inset 0px 0px 0px 4px #2C3540;
+    transition: background 1000ms ease-in;
+}
+.radio-custom:checked + .radio-custom-label {
     color: white;
 }
-
-.radio-custom:focus + .radio-custom-label {
-  outline: 1px solid #ddd; /* focus style */
-}
+/*.radio-custom:focus + .radio-custom-label {
+  outline: 1px solid #ddd;
+}*/
 
 #radio-1.radio-custom + .radio-custom-label:before {
     border: 3px solid #36A3BE;
@@ -160,6 +156,7 @@ body {
 #radio-4.radio-custom + .radio-custom-label:before {
     border: 3px solid #DA9233;
 }
+
 #radio-4.radio-custom:checked + .radio-custom-label:before {
     background: #DA9233;
 }
