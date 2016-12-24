@@ -85,9 +85,11 @@ body {
     width: 30px;
     text-align: center;
     border-radius: 50%;
-    padding-top: 2px;
+    padding-top: 4px;
     border: 2px solid #7F7F7F;
     color: #7F7F7F;
+    position: relative;
+    top: -5px;
 }
 /* end */
 
@@ -411,7 +413,7 @@ body {
     
     .mail-option ul li {
         padding:8px;
-        font-size: 18px;
+        font-size: 14px;
     }
     .radio-button-container{
         padding:15px 0;
